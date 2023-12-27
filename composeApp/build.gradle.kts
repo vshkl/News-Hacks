@@ -47,9 +47,6 @@ kotlin {
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
         }
-        jvmMain.dependencies {
-            implementation(libs.sqldelight.driver.jvm)
-        }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -64,10 +61,12 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.xml.util.core)
             implementation(libs.xml.util.serialization)
+            implementation(libs.sqldelight.extension.coroutines)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.ktor.client.cio)
+            implementation(libs.sqldelight.driver.jvm)
         }
     }
 }

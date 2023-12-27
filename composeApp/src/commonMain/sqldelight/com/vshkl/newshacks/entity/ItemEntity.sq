@@ -1,6 +1,6 @@
-CREATE TABLE itemEntity (
+CREATE TABLE ItemEntity (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
+    title TEXT UNIQUE NOT NULL,
     pubDate TEXT NOT NULL,
     link TEXT NOT NULL,
     commentsLink TEXT NOT NULL
@@ -8,12 +8,12 @@ CREATE TABLE itemEntity (
 
 insert:
 INSERT OR REPLACE
-INTO itemEntity(title, pubDate, link, commentsLink)
+INTO ItemEntity(title, pubDate, link, commentsLink)
 VALUES (?, ?, ?, ?);
 
 selectAll:
 SELECT *
-FROM itemEntity;
+FROM ItemEntity;
 
 deleteAll:
-DELETE FROM itemEntity;
+DELETE FROM ItemEntity;
