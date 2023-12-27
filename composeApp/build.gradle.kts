@@ -28,7 +28,8 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
-            isStatic = false
+            isStatic = false // SwiftUI preview requires dynamic framework
+            linkerOpts("-lsqlite3")
         }
     }
 
