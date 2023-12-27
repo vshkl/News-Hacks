@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.detekt)
     alias(libs.plugins.serialization)
+    alias(libs.plugins.sqldelight)
 }
 
 kotlin {
@@ -17,9 +18,9 @@ kotlin {
             }
         }
     }
-    
+
     jvm("desktop")
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -30,17 +31,24 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.sqldelight.driver.android)
+        }
+        nativeMain.dependencies {
+            implementation(libs.sqldelight.driver.native)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+        }
+        jvmMain.dependencies {
+            implementation(libs.sqldelight.driver.jvm)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -106,6 +114,14 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "com.vshkl.newshacks"
             packageVersion = "1.0.0"
+        }
+    }
+}
+
+sqldelight {
+    databases {
+        create("NewsHacksDatabase") {
+            packageName.set("com.vshkl.newshacks")
         }
     }
 }
