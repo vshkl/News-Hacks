@@ -28,7 +28,7 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
-            isStatic = true
+            isStatic = false
         }
     }
 
@@ -46,6 +46,7 @@ kotlin {
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.sqldelight.driver.native)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
