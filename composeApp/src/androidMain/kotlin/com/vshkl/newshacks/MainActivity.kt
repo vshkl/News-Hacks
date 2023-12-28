@@ -1,10 +1,9 @@
 package com.vshkl.newshacks
 
-import App
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import di.PlatformModule
+import com.vshkl.newshacks.di.PlatformModule
 
 class MainActivity : ComponentActivity() {
 
