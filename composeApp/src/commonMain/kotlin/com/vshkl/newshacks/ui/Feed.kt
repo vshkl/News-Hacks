@@ -1,5 +1,6 @@
 package com.vshkl.newshacks.ui
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,6 +18,7 @@ fun Feed(
     modifier: Modifier = Modifier,
 ) {
     LazyColumn(
+        verticalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = contentPadding,
         modifier = modifier,
     ) {

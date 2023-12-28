@@ -15,6 +15,6 @@ fun FeedScreenContent(
         feedItems = feedItems,
         onSourceClick = onSourceClick,
         onCommentsClick = onCommentsClick,
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
     )
 }
