@@ -20,10 +20,12 @@ ktor = "2.3.7"
 xml-util = "0.86.3"
 kotlinx = "1.6.2"
 sqldelight = "2.0.1"
+kotlinx-datetime = "0.5.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }

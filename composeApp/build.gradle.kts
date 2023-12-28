@@ -64,6 +64,7 @@ kotlin {
             implementation(libs.xml.util.core)
             implementation(libs.xml.util.serialization)
             implementation(libs.sqldelight.extension.coroutines)
+            implementation(libs.kotlinx.datetime)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
