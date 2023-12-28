@@ -11,6 +11,8 @@ import model.Item
 @Composable
 fun Feed(
     feedItems: List<Item> = emptyList(),
+    onSourceClick: (String) -> Unit = {},
+    onCommentsClick: (String) -> Unit = {},
     contentPadding: PaddingValues = PaddingValues(0.dp),
     modifier: Modifier = Modifier,
 ) {
@@ -22,7 +24,11 @@ fun Feed(
             items = feedItems,
             key = Item::id,
         ) {
-            ItemRow(item = it)
+            ItemRow(
+                item = it,
+                onSourceClick = onSourceClick,
+                onCommentsClick = onCommentsClick,
+            )
         }
     }
 }
