@@ -1,4 +1,4 @@
-package com.vshkl.newshacks
+package com.vshkl.newshacks.di
 
 import io.ktor.http.ContentType
 import io.ktor.http.content.OutgoingContent

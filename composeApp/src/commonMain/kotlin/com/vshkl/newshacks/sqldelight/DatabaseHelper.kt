@@ -1,12 +1,12 @@
-package com.vshkl.newshacks
+package com.vshkl.newshacks.sqldelight
 
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import app.cash.sqldelight.db.SqlDriver
+import com.vshkl.newshacks.NewsHacksDatabase
 import com.vshkl.newshacks.entity.ItemEntity
 import com.vshkl.newshacks.entity.asItem
 import com.vshkl.newshacks.model.Item
-import com.vshkl.newshacks.sqldelight.transactionWithContext
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

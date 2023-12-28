@@ -10,6 +10,7 @@ import com.vshkl.newshacks.di.PlatformModule
 import com.vshkl.newshacks.dto.RssDto
 import com.vshkl.newshacks.dto.asItem
 import com.vshkl.newshacks.model.Item
+import com.vshkl.newshacks.sqldelight.DatabaseHelper
 import com.vshkl.newshacks.ui.FeedScene
 import io.ktor.client.call.body
 import io.ktor.client.request.get
